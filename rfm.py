@@ -1,4 +1,3 @@
-
 ###############################################################
 # 1. Understanding Data
 ###############################################################
@@ -9,7 +8,7 @@ pd.set_option("display.max_columns", None)
 pd.set_option("display.max_rows", None)
 pd.set_option("display.float_format", lambda x: '%.3f' % x)
 
-df = pd.read_excel("datasets/online_retail_I.xlsx")
+df = pd.read_excel("online_retail_I.xlsx")
 df.head()
 
 # When we look at the data from here, we see that there is multiplexing in Invoice. Because each invoice contains more than one product.
@@ -57,8 +56,8 @@ df.head()
 
 # we will define the day of analysis, however, it would not be correct to give today's date since we performed this analysis in years after the years in the dataset (2009-2010).
 # so we will determine the analysis date according to the last purchasing made
-df["InvoiceDate"].max() #For example, the last shopping date was 2010-12-09. We determine our analysis date by putting 2 days on top of this date.
-today_date = dt.datetime(2010,12,11)
+df["InvoiceDate"].max() #For example, the last shopping date was 2010-01-18. We determine our analysis date by putting 2 days on top of this date.
+today_date = dt.datetime(2010,1,18)
 type(today_date)
 
 rfm = df.groupby("Customer ID").agg({"InvoiceDate": lambda InvoiceDate: (today_date - InvoiceDate.max()).days,
