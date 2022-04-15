@@ -21,3 +21,6 @@ CustomerID: Unique customer number.
 
 Country: The country that customer lives in.
 
+We will segment customers according to the table below:
+
+![image](https://user-images.githubusercontent.com/59892948/163556024-9e1eb427-0201-4a88-8c9d-fbd48cceda1c.png)
