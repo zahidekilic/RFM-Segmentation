@@ -2,6 +2,7 @@
 This code, segments the given number of customers with RFM segmentation rules. 
 
 Dataset: https://archive.ics.uci.edu/ml/datasets/Online+Retail+II
+
 This dataset consists of billing information of a UK-based online shopping site. There are two sheets in the Excel file. The first one covers the years 2009-2010, the second one covers the years 2010-2011. The variables in the data set are as follows:
 
 InvoiceNo: Invoice number. The unique number of each transaction, that is, the invoice. Aborted operation if it starts with C.
